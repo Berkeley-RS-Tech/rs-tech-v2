@@ -36,6 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.owl-logo {
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-bottom: -50px;
+}
+
 /*
 h1 {
   font-family: 'Poppins', sans-serif;
