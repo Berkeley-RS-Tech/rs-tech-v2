@@ -9,13 +9,11 @@ function openInNewTab(url) {
 
 function social_network() {
   return (
-
       <div className="owl-logo">
       <a botton onClick={() => openInNewTab("https://www.youtube.com/watch?v=dQw4w9WgXcQ")} > 
         <img src={owl} alt='owl'/>
         </a>
       </div>
-
   );
 }
 
