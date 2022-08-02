@@ -1,6 +1,43 @@
+# Introduction
+Used MUI core. MUI Core is a collection of React UI libraries for shipping new feature faster. 
+
+# Getting Started with MUI 
+Your application will need to install MUI core.
+
+## Material UI
+Material UI is available as an npm package.\
+npm:npm install @mui/materi al @emotion/react @emotion/styled\
+yarn: yarn add @mui/material @emotion/react @emotion/styled
+
+## MUI Base
+MUI Base is available as an npm package.\
+npm: npm install @mui/base\
+yarn: yarn add @mui/base\
+Note: MUI Base is still in alpha. We are adding new components regularly and you're welcome to contribute!
+
+## MUI System
+MUI System is available as an npm package.\
+npm: npm install @mui/system @emotion/react @emotion/styled\
+yarn: yarn add @mui/system @emotion/react @emotion/styled\
+Or if you want to use styled-components as a styling engine:\
+npm: npm install @mui/material @mui/styled-engine-sc styled-components\
+yarn: yarn add @mui/material @mui/styled-engine-sc styled-components
+
+## MUI Icons-material
+This package provides the Google Material Icons converted to SvgIcon components.
+npm : npm install @mui/icons-material\
+yarn : yarn add @mui/icons-material\
+These components use the MUI SvgIcon component to render the SVG path for each icon.\
+If you are not already using MUI in your project, you can add it with:\
+npm : npm install @mui/material\
+yarn: yarn add @mui/material
+
+
 # Getting Started with Create React App
 
+Your application will need react installed.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
