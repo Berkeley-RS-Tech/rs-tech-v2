@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.middleBlock {
+  width: 50%;
+}
+
+.circle {
+  border-radius: 50%;
+  background-color: blue;
+  width: 25px;
+  height: 25px;
+}

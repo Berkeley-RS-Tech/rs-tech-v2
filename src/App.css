@@ -43,3 +43,28 @@
   margin-top: -50px;
   margin-bottom: -50px;
 }
+
+.rowC {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.colC {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+}
+
+
+.box {
+  border-style: solid;
+  width: 25%;
+}
+  
+
+.right-box {
+  border-style: solid;
+  float: right;
+  width: 25%;
+}

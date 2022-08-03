@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import App from './App';
 import './index.css';
-//import App from './App';
 import reportWebVitals from './reportWebVitals';
 import SignIn from './sign_in';
 import SignUp from './sign_up';
+import social from './SocialNetwork'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-   <SignIn />
+   <App></App>
 </React.StrictMode>
 );
 
