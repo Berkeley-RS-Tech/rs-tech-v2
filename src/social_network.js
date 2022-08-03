@@ -1,20 +1,137 @@
 import './App.css';
+//import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from 'react';
 import owl from './reentry-owl.jpg';
 
+class SocialNetwork extends React.Component {
+   render() {
+    return (
+      <div>
+        <Header></Header>
+        <div className="rowC">
+          <Sidebar></Sidebar>
+          <div className="middleBlock">
 
-function openInNewTab(url) {
-  window.open(url, '_blank', 'noopener,noreferrer');
+          </div>
+          <Connections></Connections>
+        </div>
+        <Hello></Hello>
+      </div>
+
+    );
+  }
 }
 
-function social_network() {
+function Hello () {
+    const sayHello = () => {
+      console.log("hello");
+    };
+
   return (
-      <div className="owl-logo">
-      <a botton onClick={() => openInNewTab("https://www.youtube.com/watch?v=dQw4w9WgXcQ")} > 
-        <img src={owl} alt='owl'/>
-        </a>
-      </div>
+      <div>
+          <ul>
+              <li>
+              check in
+              </li>
+          </ul>
+      </div> 
   );
 }
 
-export default social_network;
+
+ function Connections() {
+      return (    
+      <div className="right-box"> 
+          <div> Connections </div> 
+          {[...Array(8)].map(((n) => <Block></Block>))}   
+      </div>
+      );
+  }
+
+
+
+function Block() {
+  return ( 
+      <div className="rowC">
+         <img src= "public/logo192.png"></img>
+              <div className="colC">
+                  <div> First Name & Last Name </div>
+                  <div> Expected May 2023 </div>
+                  <div> Major: </div>
+              </div>
+      </div>
+  )
+}
+
+
+function Header() {
+  return (<div> 
+    <img src="https://berkeley-reentry.herokuapp.com/assets/reentry-owl-0957db2dd04486d63801ef01100558398264faec46b1da807b755f4e34f1772f.jpg"></img>
+    <input></input>
+</div>);
+}
+  
+
+
+  function Sidebar(props) {
+      return (<div className="box">
+          <Circle></Circle>
+          <div>{props.username}</div>
+          <SideBox></SideBox>
+      </div>);
+  
+  }
+
+
+function Circle() {
+      return(
+          <div>
+              <div className="circle"> </div>
+          </div>
+      );
+  }
+
+
+  function SideBox(props)  {
+      return (<div>
+          <div> Age: {props.age} </div>
+          <div> Grad Year: {props.grad_year} </div>
+          <div> Past Coursework: </div>
+          <div> Current Coursework: </div>
+          <div> Career Focus/Interest </div>
+          <ul> 
+               <li> Connections </li>
+               <li> Contacts </li>
+               <li> Following </li>
+          </ul>
+       </div>);
+  }
+  
+//   function CheckIn() {
+//     return (
+//     <View style={styles.container}>
+//     <View style={styles.titleWrapper}>
+//         ...
+//         ...
+//     </View>
+//     <View style={styles.inputWrapper}>
+//         ...
+//         ...
+//     </View>
+
+//     <View style={styles.footer}>
+//         <TouchableOpacity>
+//             <View style={styles.nextBtn}>
+//                 <Text style={styles.nextBtnText}>Next</Text>
+//             </View>
+//         </TouchableOpacity>
+//     </View>
+// </View> );
+ 
+
+
+
+
+
+
+export default SocialNetwork;
