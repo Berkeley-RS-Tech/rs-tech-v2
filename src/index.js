@@ -19,11 +19,10 @@ import SocialNetwork from "./social_network";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Router>
-    {/* <SignIn /> */}
     <Routes>
       <Route path="/" exact element={<SignIn />} />
       <Route path="/social_network" exact element={<SocialNetwork />} />
-      <Route path="/sign_uo" exact element={<SignUp />} />
+      <Route path="/sign_up" exact element={<SignUp />} />
     </Routes>
   </Router>
   //   <React.StrictMode>
