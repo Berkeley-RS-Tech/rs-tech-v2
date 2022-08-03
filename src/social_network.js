@@ -106,32 +106,8 @@ function Circle() {
           </ul>
        </div>);
   }
-  
-//   function CheckIn() {
-//     return (
-//     <View style={styles.container}>
-//     <View style={styles.titleWrapper}>
-//         ...
-//         ...
-//     </View>
-//     <View style={styles.inputWrapper}>
-//         ...
-//         ...
-//     </View>
 
-//     <View style={styles.footer}>
-//         <TouchableOpacity>
-//             <View style={styles.nextBtn}>
-//                 <Text style={styles.nextBtnText}>Next</Text>
-//             </View>
-//         </TouchableOpacity>
-//     </View>
-// </View> );
  
-
-
-
-
 
 
 export default SocialNetwork;
