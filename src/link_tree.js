@@ -19,6 +19,7 @@ import { createBrowserHistory } from "history";
 import OwlImage from "./reentry-owl.jpg";
 
 function Copyright(props) {
+
   return (
     <Typography
       variant="body2"
@@ -35,6 +36,8 @@ function Copyright(props) {
     </Typography>
   );
 }
+
+
 
 const theme = createTheme();
 
