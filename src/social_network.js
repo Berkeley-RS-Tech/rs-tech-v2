@@ -1,7 +1,6 @@
-// import './App.css';
-// //import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-// import React from 'react';
-// import owl from './reentry-owl.jpg';
+import './App.css';
+import React from 'react';
+import owl from './reentry-owl.jpg';
 
 // class SNetwork extends React.Component {
 //    render() {
@@ -38,14 +37,6 @@
 //   );
 // }
 
-//  function Connections() {
-//       return (
-//       <div className="right-box">
-//           <div> Connections </div>
-//           {[...Array(8)].map(((n) => <Block></Block>))}
-//       </div>
-//       );
-//   }
 
 // function Block() {
 //   return (
@@ -101,7 +92,6 @@
 
 // export default SocialNetwork;
 
-import * as React from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -120,7 +110,7 @@ import LinkTree from "./link_tree";
 //import {Route,Link} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { createBrowserHistory } from "history";
-
+import AccountCircleSharpIcon from '@mui/icons-material/AccountCircleSharp';
 function Copyright(props) {
   return (
     <Typography
@@ -140,6 +130,21 @@ function Copyright(props) {
 }
 const theme = createTheme();
 
+function Connections() {
+  return (
+   <Grid>  
+     {[...Array(8)].map(((n) => 
+     <Box> 
+      <Avatar sx={{ width: 50, height: 50, m: 3, bgcolor: "main" }} >
+        <AccountCircleSharpIcon/>
+      </Avatar>
+
+       </Box>))}
+    
+     </Grid>
+  );
+}
+
 // social network page using Material-UI
 export default function SocialNetwork() {
   const handler = (event) => {
@@ -156,37 +161,24 @@ export default function SocialNetwork() {
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
-        {/* <Avatar alt="owl" src="owl" component={owl}>
-                <LockOutlinedIcon />
-              </Avatar> */}
-        <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-          <LockOutlinedIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          username
-          <Grid container spacing={2}>
+          <img  src={owl}/>
+        {/*</Avatar>*/}
+        <Typography component="h1" variant="body1">
+          Person Name
+          
+          <Grid container >
             <Grid item xs={8}>
-              Age:
+              Age: <br/>
+              Grad Year:<br/>
+              Past Coursework: <br/>
+              Career Focus/Interest: <br/>
+              Connections <br/>
+              Contacts <br/>
+              Following <br/>
             </Grid>
-            <Grid item xs={4}>
-              Grad Year:
-            </Grid>
-            <Grid item xs={4}>
-              Past Coursework:
-            </Grid>
-            <Grid item xs={4}>
-              Career Focus/Interest
-            </Grid>
-            <Grid item xs={4}>
-              Connections
-            </Grid>
-            <Grid item xs={4}>
-              Contacts
-            </Grid>
-            <Grid item xs={4}>
-              Following
-            </Grid>
+            <Connections/>
           </Grid>
+
         </Typography>
         <Copyright sx={{ mt: 5 }} />
       </Container>
