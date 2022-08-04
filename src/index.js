@@ -5,6 +5,9 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import SignIn from "./sign_in";
 import SignUp from "./sign_up";
+import Forgot from "./forgot_password";
+import LinkTree from "./link_tree";
+import CheckedIn from "./checked_in";
 import { Routes } from "react-router-dom";
 
 import {
@@ -23,6 +26,9 @@ root.render(
       <Route path="/" exact element={<SignIn />} />
       <Route path="/social_network" exact element={<SocialNetwork />} />
       <Route path="/sign_up" exact element={<SignUp />} />
+      <Route path="/forgot_password" exact element={<Forgot />} />
+      <Route path="/link_tree" exact element={<LinkTree />} />
+      <Route path="/checked_in" exact element={<CheckedIn />} />
     </Routes>
   </Router>
   //   <React.StrictMode>

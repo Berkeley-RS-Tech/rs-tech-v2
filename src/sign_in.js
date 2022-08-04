@@ -13,6 +13,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import SignUp from "./sign_up";
+import LinkTree from "./link_tree";
 //import {Route,Link} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { createBrowserHistory } from "history";
@@ -25,8 +26,8 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit" href="https://reentry.berkeley.edu/">
+        reentry.berkeley.edu
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -97,7 +98,7 @@ export default function SignIn() {
             />
             <Button
               onClick={() => {
-                history.push("/social_network");
+                history.push("/link_tree");
                 window.location.reload();
               }}
               type="submit"
@@ -109,7 +110,14 @@ export default function SignIn() {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <Link
+                  onClick={() => {
+                    history.push("/forgot_password");
+                    window.location.reload();
+                  }}
+                  to="Forgot"
+                  variant="body2"
+                >
                   Forgot password?
                 </Link>
               </Grid>
