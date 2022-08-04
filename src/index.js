@@ -1,19 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 //import App from './App';
-import reportWebVitals from './reportWebVitals';
-import SignIn from './sign_in';
-import SignUp from './sign_up';
+import reportWebVitals from "./reportWebVitals";
+import SignIn from "./sign_in";
+import SignUp from "./sign_up";
+import { Routes } from "react-router-dom";
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
+import SocialNetwork from "./social_network";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-
-  <React.StrictMode>
-   <SignIn />
-</React.StrictMode>
+  <Router>
+    <Routes>
+      <Route path="/" exact element={<SignIn />} />
+      <Route path="/social_network" exact element={<SocialNetwork />} />
+      <Route path="/sign_up" exact element={<SignUp />} />
+    </Routes>
+  </Router>
+  //   <React.StrictMode>
+  //    <SignIn />
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
