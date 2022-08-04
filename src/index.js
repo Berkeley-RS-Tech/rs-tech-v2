@@ -7,8 +7,10 @@ import SignIn from './sign_in';
 import SignUp from './sign_up';
 
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
   <React.StrictMode>
    <SignIn />
 </React.StrictMode>
