@@ -111,6 +111,7 @@ import LinkTree from "./link_tree";
 import { useNavigate } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import AccountCircleSharpIcon from '@mui/icons-material/AccountCircleSharp';
+import { margin } from '@mui/system';
 function Copyright(props) {
   return (
     <Typography
@@ -134,13 +135,14 @@ function Connections() {
   return (
    <Grid>  
      {[...Array(8)].map(((n) => 
-     <Box> 
-      <Avatar sx={{ width: 50, height: 50, m: 3, bgcolor: "main" }} >
+     <Box>
+      <Avatar sx={{ width: 50, height: 50, m: 0, bgcolor: "main" }} >
         <AccountCircleSharpIcon/>
       </Avatar>
-
+      Name: <br/>
+      School Year: <br/>
+      Similar Major: <br/>
        </Box>))}
-    
      </Grid>
   );
 }
@@ -159,14 +161,13 @@ export default function SocialNetwork() {
   };
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Container component="main">
         <CssBaseline />
-          <img  src={owl}/>
+          <img src={owl} alt = 'owl'/>
         {/*</Avatar>*/}
         <Typography component="h1" variant="body1">
           Person Name
-          
-          <Grid container >
+          <Grid typography={"body5"} container>
             <Grid item xs={8}>
               Age: <br/>
               Grad Year:<br/>
@@ -178,7 +179,6 @@ export default function SocialNetwork() {
             </Grid>
             <Connections/>
           </Grid>
-
         </Typography>
         <Copyright sx={{ mt: 5 }} />
       </Container>
